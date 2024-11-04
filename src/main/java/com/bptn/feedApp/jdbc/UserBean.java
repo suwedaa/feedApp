@@ -1,6 +1,7 @@
 package com.bptn.feedApp.jdbc;
 
-import java.security.Timestamp;
+//import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class UserBean {
 
