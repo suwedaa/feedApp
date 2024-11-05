@@ -16,14 +16,14 @@ import com.bptn.feedApp.jdbc.UserBean;
 import com.bptn.feedApp.jdbc.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("user")
 public class UserController {
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("/test")
+	@GetMapping("test")
 	public String testController() {
 		logger.debug("The testController() method was invoked!");
 		return "The FeedApp application is up and running";
