@@ -14,25 +14,32 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bptn.feedApp.jdbc.UserBean;
 import com.bptn.feedApp.jdbc.UserService;
+import com.bptn.feedApp.jpa.User;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("test")
+	@GetMapping("/test")
 	public String testController() {
 		logger.debug("The testController() method was invoked!");
 		return "The FeedApp application is up and running";
 	}
 
 	@GetMapping("/")
-	public List<UserBean> listUsers() {
+	public List<User> listUsers() {
 		logger.debug("The listUsers() method was invoked!");
 		return userService.listUsers();
+	}
+
+	@GetMapping("/{username}")
+	public User findByUsername(@PathVariable String username) {
+		logger.debug("The findByUsername() method was invoked!, username={}", username);
+		return this.userService.findByUsername(username);
 	}
 
 	@GetMapping("/{first}/{last}/{username}/{password}/{phone}/{emailId}")

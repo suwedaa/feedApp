@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.bptn.feedApp.jpa.User;
+
 @Repository
 public class UserDao {
 
@@ -16,14 +18,14 @@ public class UserDao {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	public List<UserBean> listUsers() {
+	public List<User> listUsers() {
 		String sql = "SELECT * FROM \"user\"";
 		return this.jdbcTemplate.query(sql, new UserMapper());
 	}
 
-	public UserBean findByUsername(String username) {
+	public User findByUsername(String username) {
 		String sql = "SELECT * FROM \"user\" WHERE username = ?";
-		List<UserBean> users = this.jdbcTemplate.query(sql, new UserMapper(), username);
+		List<User> users = this.jdbcTemplate.query(sql, new UserMapper(), username);
 		/*
 		 * Returns null if users is empty; otherwise, returns the first element in the
 		 * list

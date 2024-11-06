@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.bptn.feedApp.jpa.User;
 
 @Service
 public class UserService {
@@ -11,11 +14,11 @@ public class UserService {
 	@Autowired
 	UserDao userDao;
 
-	public List<UserBean> listUsers() {
+	public List<User> listUsers() {
 		return this.userDao.listUsers();
 	}
 
-	public UserBean findByUsername(String username) {
+	public User findByUsername(@PathVariable String username) {
 		return this.userDao.findByUsername(username);
 	}
 

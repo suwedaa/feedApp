@@ -5,12 +5,14 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-public class UserMapper implements RowMapper<UserBean> {
+import com.bptn.feedApp.jpa.User;
+
+public class UserMapper implements RowMapper<User> {
 
 	@Override
-	public UserBean mapRow(ResultSet rs, int rowNum) throws SQLException {
+	public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 		/* Create a UserBean object */
-		UserBean user = new UserBean();
+		User user = new User();
 
 		/* Populates the UserBean object with data from the resultSet */
 		user.setUserId(rs.getInt("userId"));
