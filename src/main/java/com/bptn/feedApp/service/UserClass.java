@@ -11,6 +11,9 @@ import com.bptn.feedApp.repository.UserRepository;
 public class UserClass {
 
 	@Autowired
+	EmailService emailService;
+
+	@Autowired
 	UserRepository userRepository;
 
 	public List<User> listUsers() {
@@ -23,5 +26,7 @@ public class UserClass {
 
 	public void createUser(User user) {
 		this.userRepository.save(user);
+		this.emailService.sendVerificationEmail(user);
+
 	}
 }

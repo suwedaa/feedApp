@@ -1,4 +1,4 @@
-#Logger
+# Logger
 logging:
   level:
     web: debug
@@ -57,14 +57,14 @@ spring:
 
 # Email Settings
 mail:
-    username: suwedatest@gmail.com
-    password: ijts tgdb adel clbd
-    host: smtp.gmail.com
-    port: 587
-    protocol: smtp
-    properties:
+  username: suwedatest@gmail.com
+  password: ijtstgdbadelclbd
+  host: smtp.gmail.com
+  port: 587
+  protocol: smtp
+  properties:
     mail:
-    mtp:
-    auth: true
-    starttls:
-    enable: true
+      smtp:
+        auth: true
+        starttls:
+          enable: true
