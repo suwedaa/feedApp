@@ -31,5 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
-config.yml
-application.yml
+.config.yml
+.application.yml
