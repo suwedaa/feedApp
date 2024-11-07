@@ -16,7 +16,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "\"Profile\"")
+@Table(name = "\"profile\"")
 public class Profile implements Serializable {
 
 	private static final long serialVersionUID = 1L;

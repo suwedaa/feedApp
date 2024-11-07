@@ -3,12 +3,10 @@ package com.bptn.feedApp.jdbc;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.bptn.feedApp.jpa.User;
 
-@Service
 public class UserService {
 
 	@Autowired
@@ -25,4 +23,5 @@ public class UserService {
 	public void createUser(UserBean user) {
 		this.userDao.createUser(user);
 	}
+
 }
