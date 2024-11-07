@@ -54,3 +54,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+
+# Email Settings
+mail:
+    username: suwedatest@gmail.com
+    password: ijts tgdb adel clbd
+    host: smtp.gmail.com
+    port: 587
+    protocol: smtp
+    properties:
+    mail:
+    mtp:
+    auth: true
+    starttls:
+    enable: true
