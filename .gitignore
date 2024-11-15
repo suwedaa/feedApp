@@ -33,5 +33,4 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignore application configuration files with sensitive info
-application.yml
+
