@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class FeedAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FeedAppApplication.class, args);
+		// comment
 	}
 
 }
